@@ -1032,118 +1032,46 @@
 <!-- STEP 04: 초기화 -->
 <div class="slide">
   <div class="label">STEP 04</div>
-  <h2>"초기화해줘" = 사무실 세팅해줘</h2>
-  <p class="body" style="margin-bottom: 12px;">CLAUDE.md가 들어있으니, AI가 읽고 작업 환경을 준비합니다.</p>
+  <h2>"초기화해줘" 한마디면 AI가 알아서 합니다</h2>
+  <p class="body" style="margin-bottom: 12px;">CLAUDE.md를 읽고, AI가 순서대로 진행합니다. 여러분은 답하기만 하면 됩니다.</p>
   <div class="cmd" style="font-size: 30px;">초기화해줘</div>
 
-  <div style="display: flex; gap: 16px; margin-top: 8px;">
-    <div class="card" style="flex: 1; padding: 20px;">
-      <div style="font-size: 18px; font-weight: 700; color: #1C1917; margin-bottom: 12px;">AI가 하는 일</div>
-      <p style="font-size: 18px; color: #44403C; line-height: 2.0;">
-        → CLAUDE.md를 읽고 업무 파악<br>
-        → 폴더 구조 자동 생성<br>
-        → 브랜드 설정 파일 생성<br>
-        → CS 답변 템플릿 생성
-      </p>
+  <div style="display: flex; gap: 12px; margin-top: 8px;">
+    <div class="card" style="flex: 1; padding: 16px; text-align: center;">
+      <div style="font-size: 28px; margin-bottom: 6px;">📁</div>
+      <div style="font-size: 16px; font-weight: 700; color: #1C1917; margin-bottom: 4px;">1. 폴더 자동 생성</div>
+      <div style="font-size: 14px; color: #78716C;">brand/, products/, output/<br>알아서 만들어줌</div>
     </div>
-    <div class="card card-accent" style="flex: 1; padding: 20px;">
-      <div style="font-size: 18px; font-weight: 700; color: #1C1917; margin-bottom: 12px;">비유하면</div>
-      <p style="font-size: 18px; color: #44403C; line-height: 2.0;">
-        신입 직원이 첫 출근해서<br>
-        📁 업무 폴더 정리하고<br>
-        📋 필요한 서류 양식 만들고<br>
-        🏢 사무실 세팅하는 것
-      </p>
+    <div style="display: flex; align-items: center; color: #EA580C;">→</div>
+    <div class="card" style="flex: 1; padding: 16px; text-align: center;">
+      <div style="font-size: 28px; margin-bottom: 6px;">🤖</div>
+      <div style="font-size: 16px; font-weight: 700; color: #1C1917; margin-bottom: 4px;">2. 브랜드 정보 인터뷰</div>
+      <div style="font-size: 14px; color: #78716C;">상호명, 컬러, 분위기 등<br>AI가 질문함 → 답하면 됨</div>
     </div>
+    <div style="display: flex; align-items: center; color: #EA580C;">→</div>
+    <div class="card" style="flex: 1; padding: 16px; text-align: center;">
+      <div style="font-size: 28px; margin-bottom: 6px;">🖼️</div>
+      <div style="font-size: 16px; font-weight: 700; color: #1C1917; margin-bottom: 4px;">3. 로고/사진 요청</div>
+      <div style="font-size: 14px; color: #78716C;">"로고나 상품 사진을<br>폴더에 넣어주세요" 안내</div>
+    </div>
+    <div style="display: flex; align-items: center; color: #EA580C;">→</div>
+    <div class="card card-accent" style="flex: 1; padding: 16px; text-align: center;">
+      <div style="font-size: 28px; margin-bottom: 6px;">✅</div>
+      <div style="font-size: 16px; font-weight: 700; color: #C2410C; margin-bottom: 4px;">4. 세팅 완료!</div>
+      <div style="font-size: 14px; color: #78716C;">이제 "상세페이지<br>만들어줘" 하면 됨</div>
+    </div>
+  </div>
+
+  <div class="card mt-sm" style="padding: 14px 24px;">
+    <p style="font-size: 20px; color: #44403C;">
+      여러분이 할 건 <span class="highlight bold">질문에 답하고, 사진을 드래그 앤 드롭</span>하는 것뿐입니다.
+    </p>
   </div>
 </div>
 
-<!-- STEP 05: 로고/상품 이미지 넣기 -->
+<!-- STEP 05: 상세페이지 인터뷰 -->
 <div class="slide">
   <div class="label">STEP 05</div>
-  <h2>로고 · 상품 사진 넣기</h2>
-  <p class="body" style="margin-bottom: 12px;">초기화하면 폴더가 생깁니다. 여기에 이미지를 <span class="highlight bold">드래그 앤 드롭</span>하세요.</p>
-
-  <div style="display: flex; gap: 20px;">
-    <!-- VS Code 파일트리 모형 -->
-    <div style="flex: 0.5; background: #1E1E1E; border-radius: 12px; padding: 20px; border: 1px solid #333;">
-      <div style="color: #CCC; font-size: 12px; font-weight: 600; margin-bottom: 12px;">탐색기</div>
-      <div style="color: #E8AB6A; font-size: 15px; margin-bottom: 6px;">📁 brand/</div>
-      <div style="margin-left: 20px;">
-        <div style="color: #E8AB6A; font-size: 14px; margin-bottom: 4px;">📁 logo/</div>
-        <div style="margin-left: 20px; border: 2px dashed #EA580C; border-radius: 8px; padding: 10px;">
-          <div style="color: #FB923C; font-size: 15px; font-weight: 700;">🖼️ logo.png</div>
-          <div style="color: #888; font-size: 12px; margin-top: 2px;">← 로고 여기에!</div>
-        </div>
-      </div>
-      <div style="color: #E8AB6A; font-size: 15px; margin-top: 10px; margin-bottom: 6px;">📁 products/</div>
-      <div style="margin-left: 20px; border: 2px dashed #EA580C; border-radius: 8px; padding: 10px;">
-        <div style="color: #FB923C; font-size: 15px; font-weight: 700;">🖼️ 상품사진.png</div>
-        <div style="color: #888; font-size: 12px; margin-top: 2px;">← 상품 사진 여기에!</div>
-      </div>
-    </div>
-    <!-- 설명 -->
-    <div style="flex: 1;">
-      <div class="install-card">
-        <div class="install-num" style="background: #EA580C;">1</div>
-        <div>
-          <div style="font-size: 20px; font-weight: 700; color: #1C1917;">이미지 파일을 폴더에 드래그 앤 드롭</div>
-          <div style="font-size: 16px; color: #78716C;">바탕화면이나 폴더에서 왼쪽 탐색기로 끌어다 놓으세요</div>
-        </div>
-      </div>
-      <div class="install-card">
-        <div class="install-num" style="background: #EA580C;">2</div>
-        <div>
-          <div style="font-size: 20px; font-weight: 700; color: #1C1917;">파일 이름 바꾸기</div>
-          <div style="font-size: 16px; color: #78716C;">파일 클릭 → <span style="background: #EA580C; color: #FFF; padding: 2px 8px; border-radius: 4px; font-weight: 700;">Enter</span> → 이름 입력 → Enter</div>
-        </div>
-      </div>
-      <div class="install-card" style="border-color: #EA580C; background: linear-gradient(135deg, #FFF1E6 0%, #FFFFFF 100%);">
-        <div class="install-num" style="background: #EA580C;">3</div>
-        <div>
-          <div style="font-size: 20px; font-weight: 700; color: #C2410C;">끝! 이제 AI가 알아서 사용합니다</div>
-          <div style="font-size: 16px; color: #78716C;">상세페이지에 로고와 사진이 자동 반영됩니다</div>
-        </div>
-      </div>
-      <div class="card mt-sm" style="padding: 14px 20px;">
-        <p style="font-size: 16px; color: #44403C;">
-          <span class="highlight bold">PNG 형태</span>를 권장합니다. 로고는 배경 투명이면 더 좋아요.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- STEP 06: 브랜드 설정 -->
-<div class="slide">
-  <div class="label">STEP 06</div>
-  <h2>브랜드 정보 입력하기</h2>
-  <p class="body" style="margin-bottom: 12px;">한번 입력하면 모든 상세페이지에 자동 반영됩니다.</p>
-
-  <div style="display: flex; gap: 16px;">
-    <div style="flex: 1;">
-      <div class="cmd cmd-sm" style="font-size: 18px; line-height: 1.8;">우리 브랜드 정보야:<br>상호명: 반죽연구소<br>분위기는 따뜻하고 정직한 느낌<br>주황색 계열로 해줘</div>
-      <p style="font-size: 18px; color: #15803D; font-weight: 600; margin-top: 8px;">→ 컬러 코드 몰라도 됩니다<br>→ '주황색'이라고만 하면 AI가 알아서</p>
-    </div>
-    <div style="flex: 1;">
-      <div class="card" style="padding: 20px;">
-        <div style="font-size: 17px; font-weight: 700; color: #1C1917; margin-bottom: 12px;">brand-config.md에 들어가는 것들</div>
-        <div style="font-size: 16px; color: #44403C; line-height: 2.0;">
-          <span class="highlight bold">기본 정보</span> — 상호명, 연락처, 이메일<br>
-          <span class="highlight bold">브랜드 컬러</span> — 메인/서브/배경/강조색<br>
-          <span class="highlight bold">브랜드 톤</span> — 분위기, 말투<br>
-          <span class="highlight bold">공통 문구</span> — 슬로건, 배송/교환 안내<br>
-          <span class="highlight bold">로고</span> — brand/logo/ 폴더에 넣기
-        </div>
-      </div>
-      <p style="font-size: 15px; color: #78716C; margin-top: 8px;">다 몰라도 됩니다. 아는 것만 말하면 AI가 채워줍니다.</p>
-    </div>
-  </div>
-</div>
-
-<!-- STEP 07: 상세페이지 인터뷰 -->
-<div class="slide">
-  <div class="label">STEP 07</div>
   <h2>AI가 인터뷰합니다</h2>
   <div class="cmd">상세페이지 만들어줘</div>
   <p class="body body-sm" style="line-height: 2;">
@@ -1152,9 +1080,9 @@
   <p class="highlight-warm mt-sm" style="font-size: 22px; font-weight: 600;">클릭으로 선택하거나, 직접 타이핑하면 됩니다</p>
 </div>
 
-<!-- STEP 08: 생성 -->
+<!-- STEP 06: 생성 -->
 <div class="slide">
-  <div class="label">STEP 08</div>
+  <div class="label">STEP 06</div>
   <h2>AI가 만들고 있습니다</h2>
   <div class="cmd">☕ 커피 한 잔 마시고 오세요</div>
   <p class="body body-sm" style="line-height: 2;">
@@ -1162,9 +1090,9 @@
   </p>
 </div>
 
-<!-- STEP 09: 수정 -->
+<!-- STEP 07: 수정 -->
 <div class="slide">
-  <div class="label">STEP 09</div>
+  <div class="label">STEP 07</div>
   <h2>마음에 안 들면?</h2>
   <div class="cmd cmd-sm">헤드라인을 '매일 아침이 기다려지는 갓 구운 빵의 비밀'로 바꿔줘</div>
   <p class="body body-sm" style="line-height: 2;">
@@ -1173,9 +1101,9 @@
   <p class="body mt-sm" style="color: #78716C;">디자인이 별로면? 사진 넣기, 색상 바꾸기, 스크린샷 참고 — 다 말로 하면 됩니다.</p>
 </div>
 
-<!-- STEP 10: 핀터레스트 레퍼런스 -->
+<!-- STEP 08: 핀터레스트 레퍼런스 -->
 <div class="slide">
-  <div class="label">STEP 10</div>
+  <div class="label">STEP 06</div>
   <h2>원하는 느낌이 있다면?</h2>
   <p class="body" style="margin-bottom: 12px;"><span class="highlight bold">핀터레스트</span>에서 마음에 드는 상세페이지를 찾아서 반영시킬 수 있습니다.</p>
 
@@ -1360,9 +1288,9 @@
   </div>
 </div>
 
-<!-- STEP 11: 플랫폼별 등록 방법 -->
+<!-- STEP 09: 플랫폼별 등록 방법 -->
 <div class="slide">
-  <div class="label">STEP 11</div>
+  <div class="label">STEP 07</div>
   <h2>완성된 상세페이지, 어디에 올리나요?</h2>
   <p class="body" style="margin-bottom: 12px;">플랫폼에 따라 방법이 다릅니다.</p>
 
@@ -1391,9 +1319,9 @@
   </div>
 </div>
 
-<!-- STEP 12: GitHub + Vercel 배포 -->
+<!-- STEP 10: GitHub + Vercel 배포 -->
 <div class="slide">
-  <div class="label">STEP 12</div>
+  <div class="label">STEP 10</div>
   <h2>내 상세페이지를 웹사이트로 만들기</h2>
   <p class="body" style="margin-bottom: 12px;"><span class="highlight bold">GitHub</span>(클라우드 창고)에 올리고, <span class="highlight bold">Vercel</span>(웹사이트 열어주는 서비스)로 배포합니다.</p>
 
@@ -1612,7 +1540,7 @@
 <!-- 네비게이션 -->
 <div class="nav">
   <button onclick="prev()">←</button>
-  <span id="counter">1 / 46</span>
+  <span id="counter">1 / 44</span>
   <button onclick="next()">→</button>
 </div>
 
