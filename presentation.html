@@ -799,73 +799,9 @@
   </div>
 </div>
 
-<!-- STEP 02: Gemini 연결 -->
+<!-- STEP 02: CLAUDE.md 넣기 -->
 <div class="slide">
   <div class="label">STEP 02</div>
-  <h2>AI 이미지 생성 연결하기 (Gemini)</h2>
-  <p class="body" style="margin-bottom: 12px;">Google AI Studio에서 API 키를 발급받고, 클로드한테 연결시킵니다.</p>
-
-  <div style="display: flex; gap: 16px;">
-    <div style="flex: 1;">
-      <div class="install-card">
-        <div class="install-num" style="background: #EA580C;">1</div>
-        <div>
-          <div style="font-size: 20px; font-weight: 700; color: #1C1917;">aistudio.google.com 접속</div>
-          <div style="font-size: 16px; color: #78716C;">구글 계정으로 로그인 → API keys → Create</div>
-        </div>
-      </div>
-      <div class="install-card">
-        <div class="install-num" style="background: #EA580C;">2</div>
-        <div>
-          <div style="font-size: 20px; font-weight: 700; color: #1C1917;">.env 파일에 키 저장</div>
-          <div style="font-size: 16px; color: #78716C;">GEMINI_API_KEY=복사한키</div>
-        </div>
-      </div>
-      <div class="install-card">
-        <div class="install-num" style="background: #EA580C;">3</div>
-        <div>
-          <div style="font-size: 20px; font-weight: 700; color: #1C1917;">클로드한테 "Gemini 연결해줘"</div>
-          <div style="font-size: 16px; color: #78716C;">AI가 알아서 MCP 서버 설정</div>
-        </div>
-      </div>
-      <div class="install-card" style="border-color: #EA580C; background: linear-gradient(135deg, #FFF1E6 0%, #FFFFFF 100%);">
-        <div class="install-num" style="background: #EA580C;">4</div>
-        <div>
-          <div style="font-size: 20px; font-weight: 700; color: #C2410C;">클로드 코드 껐다 켜기 → 연결 완료!</div>
-          <div style="font-size: 16px; color: #78716C;">재시작해야 Gemini가 활성화됩니다</div>
-        </div>
-      </div>
-    </div>
-    <div style="flex: 0.8;">
-      <div class="card card-accent" style="padding: 20px; margin-bottom: 12px;">
-        <div style="font-size: 18px; font-weight: 700; color: #1C1917; margin-bottom: 10px;">연결되면 이렇게 쓸 수 있어요</div>
-        <div style="background: #1C1917; border-radius: 8px; padding: 12px 16px; border-left: 3px solid #F97316;">
-          <span style="color: #FFF; font-size: 16px;">상세페이지 이미지 만들어줘</span><br>
-          <span style="background: #EA580C; color: #FFF; padding: 2px 6px; border-radius: 4px; font-size: 14px; font-weight: 700; margin-top: 4px; display: inline-block;">@</span>
-          <span style="color: #FB923C; font-weight: 600; font-size: 15px;"> 상품사진.png</span>
-        </div>
-        <p style="font-size: 16px; color: #44403C; margin-top: 10px; line-height: 1.7;">
-          자동으로 3가지 버전 생성:<br>
-          ① 히어로 ② 기능성 ③ 구매유도
-        </p>
-      </div>
-      <div class="card" style="padding: 14px; border-color: #DC2626; margin-bottom: 10px;">
-        <p style="font-size: 15px; color: #DC2626; font-weight: 600;">API 키는 절대 유출 금지!<br>
-        <span style="color: #78716C; font-weight: 400;">.env 파일에만 보관하세요</span></p>
-      </div>
-      <div class="card" style="padding: 14px;">
-        <p style="font-size: 14px; color: #44403C; line-height: 1.6;">
-          <span class="highlight bold">비용:</span> 이미지 1장당 약 <span class="highlight bold">20~40원</span><br>
-          <span style="color: #78716C;">처음엔 무료 토큰이 주어지지만,<br>이후 결제가 필요합니다.<br>상세페이지 3장 만들어도 100원 수준!</span>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- STEP 03: CLAUDE.md 넣기 -->
-<div class="slide">
-  <div class="label">STEP 03</div>
   <h2>업무 매뉴얼(CLAUDE.md) 넣기</h2>
   <p class="body" style="margin-bottom: 12px;">제가 드리는 <span class="highlight bold">CLAUDE.md</span> 파일을 폴더에 넣습니다.</p>
 
@@ -1032,9 +968,9 @@
   </div>
 </div>
 
-<!-- STEP 04: 초기화 -->
+<!-- STEP 03: 초기화 -->
 <div class="slide">
-  <div class="label">STEP 04</div>
+  <div class="label">STEP 03</div>
   <h2>"초기화해줘" 한마디면 AI가 알아서 합니다</h2>
   <p class="body" style="margin-bottom: 12px;">CLAUDE.md를 읽고, AI가 순서대로 진행합니다. 여러분은 답하기만 하면 됩니다.</p>
   <div class="cmd" style="font-size: 30px;">초기화해줘</div>
@@ -1072,9 +1008,9 @@
   </div>
 </div>
 
-<!-- STEP 05: 상세페이지 인터뷰 -->
+<!-- STEP 04: 상세페이지 인터뷰 -->
 <div class="slide">
-  <div class="label">STEP 05</div>
+  <div class="label">STEP 03</div>
   <h2>AI가 인터뷰합니다</h2>
   <div class="cmd">상세페이지 만들어줘</div>
   <p class="body body-sm" style="line-height: 2;">
@@ -1083,9 +1019,9 @@
   <p class="highlight-warm mt-sm" style="font-size: 22px; font-weight: 600;">클릭으로 선택하거나, 직접 타이핑하면 됩니다</p>
 </div>
 
-<!-- STEP 06: 생성 -->
+<!-- STEP 05: 생성 -->
 <div class="slide">
-  <div class="label">STEP 06</div>
+  <div class="label">STEP 03</div>
   <h2>AI가 만들고 있습니다</h2>
   <div class="cmd">☕ 커피 한 잔 마시고 오세요</div>
   <p class="body body-sm" style="line-height: 2;">
@@ -1093,9 +1029,9 @@
   </p>
 </div>
 
-<!-- STEP 07: 수정 -->
+<!-- STEP 06: 수정 -->
 <div class="slide">
-  <div class="label">STEP 07</div>
+  <div class="label">STEP 03</div>
   <h2>마음에 안 들면?</h2>
   <div class="cmd cmd-sm">헤드라인을 '매일 아침이 기다려지는 갓 구운 빵의 비밀'로 바꿔줘</div>
   <p class="body body-sm" style="line-height: 2;">
@@ -1104,9 +1040,9 @@
   <p class="body mt-sm" style="color: #78716C;">디자인이 별로면? 사진 넣기, 색상 바꾸기, 스크린샷 참고 — 다 말로 하면 됩니다.</p>
 </div>
 
-<!-- STEP 08: 핀터레스트 레퍼런스 -->
+<!-- STEP 07: 핀터레스트 레퍼런스 -->
 <div class="slide">
-  <div class="label">STEP 06</div>
+  <div class="label">STEP 03</div>
   <h2>원하는 느낌이 있다면?</h2>
   <p class="body" style="margin-bottom: 12px;"><span class="highlight bold">핀터레스트</span>에서 마음에 드는 상세페이지를 찾아서 반영시킬 수 있습니다.</p>
 
@@ -1347,9 +1283,9 @@
   </div>
 </div>
 
-<!-- STEP 09: 플랫폼별 등록 방법 -->
+<!-- STEP 08: 플랫폼별 등록 방법 -->
 <div class="slide">
-  <div class="label">STEP 07</div>
+  <div class="label">STEP 03</div>
   <h2>완성된 상세페이지, 어디에 올리나요?</h2>
   <p class="body" style="margin-bottom: 12px;">플랫폼에 따라 방법이 다릅니다.</p>
 
@@ -1378,9 +1314,9 @@
   </div>
 </div>
 
-<!-- STEP 10: GitHub + Vercel 배포 -->
+<!-- STEP 09: GitHub + Vercel 배포 -->
 <div class="slide">
-  <div class="label">STEP 10</div>
+  <div class="label">STEP 09</div>
   <h2>내 상세페이지를 웹사이트로 만들기</h2>
   <p class="body" style="margin-bottom: 12px;"><span class="highlight bold">GitHub</span>(클라우드 창고)에 올리고, <span class="highlight bold">Vercel</span>(웹사이트 열어주는 서비스)로 배포합니다.</p>
 
@@ -1599,7 +1535,7 @@
 <!-- 네비게이션 -->
 <div class="nav">
   <button onclick="prev()">←</button>
-  <span id="counter">1 / 45</span>
+  <span id="counter">1 / 44</span>
   <button onclick="next()">→</button>
 </div>
 
