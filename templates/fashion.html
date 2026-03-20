@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{상품명}} - {{상호명}}</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; background: #f5f5f5; color: #333; }
+        .container { max-width: 500px; margin: 0 auto; background: #fff; }
+
+        /* 패션용 깔끔한 톤 */
+        :root {
+            --main-color: {{메인컬러|#1A1A1A}};
+            --sub-color: {{서브컬러|#666666}};
+            --bg-clean: {{배경컬러|#FAFAFA}};
+            --accent: {{강조컬러|#000000}};
+        }
+
+        .header { text-align: center; padding: 20px; background: #fff; border-bottom: 1px solid #eee; }
+        .header img { max-width: 120px; height: auto; }
+
+        .hero { background: var(--bg-clean); padding: 40px 24px; text-align: center; }
+        .hero h1 { font-size: 24px; font-weight: 300; letter-spacing: 2px; color: var(--main-color); margin-bottom: 12px; text-transform: uppercase; }
+        .hero p { font-size: 15px; color: var(--sub-color); line-height: 1.6; letter-spacing: 0.5px; }
+
+        .problem { padding: 40px 24px; background: #fff; }
+        .problem h2 { font-size: 18px; color: var(--main-color); margin-bottom: 20px; text-align: center; letter-spacing: 1px; }
+        .problem-list { list-style: none; }
+        .problem-list li { padding: 12px 0; border-bottom: 1px solid #f0f0f0; font-size: 15px; line-height: 1.5; color: var(--sub-color); }
+        .problem-list li::before { content: "✓ "; color: var(--main-color); font-weight: 700; }
+
+        .solution { padding: 40px 24px; background: var(--main-color); text-align: center; }
+        .solution h2 { font-size: 22px; color: #fff; font-weight: 300; letter-spacing: 2px; margin-bottom: 16px; }
+        .solution p { font-size: 15px; color: rgba(255,255,255,0.8); line-height: 1.6; }
+
+        .features { padding: 40px 24px; }
+        .features h2 { font-size: 18px; text-align: center; margin-bottom: 24px; color: var(--main-color); letter-spacing: 1px; }
+        .feature-card { border: 1px solid #eee; border-radius: 4px; padding: 24px; margin-bottom: 16px; }
+        .feature-card h3 { font-size: 16px; color: var(--main-color); margin-bottom: 8px; font-weight: 600; }
+        .feature-card p { font-size: 14px; color: var(--sub-color); line-height: 1.5; }
+
+        /* 사이즈 가이드 (패션 특화) */
+        .size-guide { padding: 40px 24px; background: var(--bg-clean); }
+        .size-guide h2 { font-size: 18px; text-align: center; margin-bottom: 20px; color: var(--main-color); }
+        .size-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        .size-table th { background: var(--main-color); color: #fff; padding: 10px; font-weight: 400; }
+        .size-table td { padding: 10px; border-bottom: 1px solid #eee; text-align: center; color: var(--sub-color); }
+
+        /* 소재 정보 (패션 특화) */
+        .material { padding: 40px 24px; }
+        .material h2 { font-size: 18px; text-align: center; margin-bottom: 20px; color: var(--main-color); }
+        .material-info { font-size: 14px; color: var(--sub-color); line-height: 1.8; text-align: center; }
+        .material-tag { display: inline-block; border: 1px solid var(--main-color); padding: 6px 14px; border-radius: 2px; font-size: 13px; margin: 4px; color: var(--main-color); }
+
+        .usage { padding: 40px 24px; background: var(--bg-clean); }
+        .usage h2 { font-size: 18px; text-align: center; margin-bottom: 24px; color: var(--main-color); }
+        .usage-step { display: flex; align-items: flex-start; margin-bottom: 20px; }
+        .step-number { background: var(--main-color); color: #fff; width: 28px; height: 28px; border-radius: 2px; display: flex; align-items: center; justify-content: center; font-weight: 400; font-size: 14px; flex-shrink: 0; margin-right: 16px; }
+        .step-text { font-size: 15px; line-height: 1.5; color: var(--sub-color); }
+
+        .reviews { padding: 40px 24px; }
+        .reviews h2 { font-size: 18px; text-align: center; margin-bottom: 24px; color: var(--main-color); }
+        .review-card { border-left: 3px solid var(--main-color); padding: 16px 20px; margin-bottom: 16px; background: var(--bg-clean); }
+        .review-stars { color: var(--main-color); font-size: 14px; margin-bottom: 8px; }
+        .review-text { font-size: 14px; color: #444; line-height: 1.5; margin-bottom: 8px; font-style: italic; }
+        .review-author { font-size: 13px; color: #999; }
+
+        .faq { padding: 40px 24px; background: var(--bg-clean); }
+        .faq h2 { font-size: 18px; text-align: center; margin-bottom: 24px; color: var(--main-color); }
+        .faq-item { border-bottom: 1px solid #eee; padding: 16px 0; }
+        .faq-q { font-size: 15px; font-weight: 600; color: var(--main-color); margin-bottom: 8px; }
+        .faq-q::before { content: "Q. "; }
+        .faq-a { font-size: 14px; color: var(--sub-color); line-height: 1.5; }
+        .faq-a::before { content: "A. "; font-weight: 600; }
+
+        .cta { padding: 40px 24px; text-align: center; background: #fff; border-top: 1px solid #eee; }
+        .cta-price { font-size: 14px; color: #999; text-decoration: line-through; margin-bottom: 4px; }
+        .cta-price-now { font-size: 28px; font-weight: 300; color: var(--main-color); margin-bottom: 8px; letter-spacing: 1px; }
+        .cta-benefit { font-size: 13px; color: var(--sub-color); margin-bottom: 20px; }
+        .cta-button { display: inline-block; background: var(--accent); color: #fff; padding: 14px 48px; font-size: 15px; font-weight: 400; text-decoration: none; letter-spacing: 2px; text-transform: uppercase; }
+
+        .footer { padding: 24px; background: var(--main-color); text-align: center; font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.8; }
+
+        .placeholder { background: #f0f0f0; border: 2px dashed #ccc; border-radius: 4px; padding: 40px 20px; text-align: center; color: #999; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="../brand/logo/logo.png" alt="{{상호명}} 로고">
+        </div>
+
+        <div class="hero">
+            <h1>{{후킹 헤드라인}}</h1>
+            <p>{{서브 카피}}</p>
+            <div class="placeholder" style="margin-top:20px">여기에 대표 상품 사진을 넣으세요</div>
+        </div>
+
+        <div class="problem">
+            <h2>이런 고민, 공감되시나요?</h2>
+            <ul class="problem-list">
+                <li>{{고민1}}</li>
+                <li>{{고민2}}</li>
+                <li>{{고민3}}</li>
+            </ul>
+        </div>
+
+        <div class="solution">
+            <h2>{{해결책 헤드라인}}</h2>
+            <p>{{해결책 설명}}</p>
+        </div>
+
+        <div class="features">
+            <h2>DETAILS</h2>
+            <div class="feature-card">
+                <div class="placeholder">특징 이미지</div>
+                <h3>{{특징1 제목}}</h3>
+                <p>{{특징1 설명}}</p>
+            </div>
+            <div class="feature-card">
+                <div class="placeholder">특징 이미지</div>
+                <h3>{{특징2 제목}}</h3>
+                <p>{{특징2 설명}}</p>
+            </div>
+            <div class="feature-card">
+                <div class="placeholder">특징 이미지</div>
+                <h3>{{특징3 제목}}</h3>
+                <p>{{특징3 설명}}</p>
+            </div>
+        </div>
+
+        <!-- 사이즈 가이드 (패션 특화) -->
+        <div class="size-guide">
+            <h2>SIZE GUIDE</h2>
+            <table class="size-table">
+                <tr><th>사이즈</th><th>어깨</th><th>가슴</th><th>총장</th></tr>
+                <tr><td>S</td><td>{{S어깨}}</td><td>{{S가슴}}</td><td>{{S총장}}</td></tr>
+                <tr><td>M</td><td>{{M어깨}}</td><td>{{M가슴}}</td><td>{{M총장}}</td></tr>
+                <tr><td>L</td><td>{{L어깨}}</td><td>{{L가슴}}</td><td>{{L총장}}</td></tr>
+                <tr><td>XL</td><td>{{XL어깨}}</td><td>{{XL가슴}}</td><td>{{XL총장}}</td></tr>
+            </table>
+        </div>
+
+        <!-- 소재 정보 (패션 특화) -->
+        <div class="material">
+            <h2>MATERIAL</h2>
+            <div style="text-align:center; margin-bottom:16px;">
+                <span class="material-tag">{{소재1}}</span>
+                <span class="material-tag">{{소재2}}</span>
+                <span class="material-tag">{{소재3}}</span>
+            </div>
+            <p class="material-info">{{소재 상세 설명}}</p>
+        </div>
+
+        <div class="usage">
+            <h2>STYLING TIP</h2>
+            <div class="usage-step">
+                <div class="step-number">1</div>
+                <div class="step-text">{{스타일링팁1}}</div>
+            </div>
+            <div class="usage-step">
+                <div class="step-number">2</div>
+                <div class="step-text">{{스타일링팁2}}</div>
+            </div>
+            <div class="usage-step">
+                <div class="step-number">3</div>
+                <div class="step-text">{{스타일링팁3}}</div>
+            </div>
+        </div>
+
+        <div class="reviews">
+            <h2>REVIEWS</h2>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-text">"{{후기1}}"</div>
+                <div class="review-author">{{후기1 작성자}}</div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-text">"{{후기2}}"</div>
+                <div class="review-author">{{후기2 작성자}}</div>
+            </div>
+        </div>
+
+        <div class="faq">
+            <h2>FAQ</h2>
+            <div class="faq-item">
+                <div class="faq-q">{{질문1}}</div>
+                <div class="faq-a">{{답변1}}</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">{{질문2}}</div>
+                <div class="faq-a">{{답변2}}</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">{{질문3}}</div>
+                <div class="faq-a">{{답변3}}</div>
+            </div>
+        </div>
+
+        <div class="cta">
+            <div class="cta-price">{{정가}}</div>
+            <div class="cta-price-now">{{판매가}}</div>
+            <div class="cta-benefit">{{혜택 문구}}</div>
+            <a href="{{구매링크}}" class="cta-button">SHOP NOW</a>
+        </div>
+
+        <div class="footer">
+            <p>{{상호명}} | {{대표자}}</p>
+            <p>{{연락처}} | {{이메일}}</p>
+            <p>{{배송 안내}}</p>
+            <p>{{하단 안내}}</p>
+        </div>
+    </div>
+</body>
+</html>

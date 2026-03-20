@@ -1,0 +1,36 @@
+<!-- CTA 섹션: 가격 + 혜택 + 구매 버튼 -->
+
+<div style="padding: 40px 24px; text-align: center; background: var(--main-color, #333);">
+    <!-- 정가 (취소선) -->
+    <p style="font-size: 14px; color: rgba(255,255,255,0.5); text-decoration: line-through; margin-bottom: 4px;">
+        {{정가}}
+    </p>
+
+    <!-- 판매가 -->
+    <p style="font-size: 32px; font-weight: 800; color: #fff; margin-bottom: 8px;">
+        {{판매가}}
+    </p>
+
+    <!-- 혜택 문구 -->
+    <p style="font-size: 14px; color: rgba(255,255,255,0.85); margin-bottom: 24px;">
+        {{혜택 문구}}
+    </p>
+
+    <!-- 구매 버튼 -->
+    <a href="{{구매링크}}" style="display: inline-block; background: var(--accent, #FF3B30); color: #fff; padding: 16px 48px; border-radius: 30px; font-size: 18px; font-weight: 700; text-decoration: none;">
+        지금 구매하기
+    </a>
+
+    <!-- 추가 안내 -->
+    <p style="font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 16px;">
+        {{추가 안내 문구}}
+    </p>
+</div>
+
+<!-- 하단 정보 -->
+<div style="padding: 24px; background: #f5f5f5; text-align: center; font-size: 13px; color: #999; line-height: 1.8;">
+    <p>{{상호명}} | {{대표자}}</p>
+    <p>{{연락처}} | {{이메일}}</p>
+    <p>{{배송 안내}}</p>
+    <p>{{하단 안내}}</p>
+</div>

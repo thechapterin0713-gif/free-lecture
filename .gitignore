@@ -1,0 +1,4 @@
+node_modules/
+.env
+*.mov
+output/test-gemini.png
